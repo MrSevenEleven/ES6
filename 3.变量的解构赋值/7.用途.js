@@ -59,10 +59,11 @@
 //     };
 // 指定参数的默认值，就避免了在函数体内部再写var foo = config.foo || 'default foo';这样的语句。
 
-    function func({a=3,b=0}){
+    function func({a=3,b=0}={}){
         console.log(a+b);
     };
     func({a:5,b:1});
+    func();
 
 //（6）遍历 Map 结构
     // 任何部署了 Iterator 接口的对象，都可以用for...of循环遍历。Map 结构原生支持 Iterator 接口，配合变量的解构赋值，获取键名和键值就非常方便。
